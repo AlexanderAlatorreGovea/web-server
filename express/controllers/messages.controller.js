@@ -7,7 +7,7 @@ function getMessages(req, res) {
   });
 
   // sends a file from our directory so in this case we are sending the image from the public folder
-  // res.sendFile(path.join(__dirname, '..', 'public', 'images', 'skimountain.jpg'));
+  // res.sendFile(path.join(__dirname, '..', 'public', 'images', 'skimountain.jpeg'));
 }
 
 function postMessage(req, res) {

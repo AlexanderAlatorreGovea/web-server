@@ -9,6 +9,12 @@ const app = express();
 // views
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
+app.get("/", (req, res) => {
+  res.render("index", {
+    title: "My Friends Are VERYY Clever",
+    caption: "Let's go skiing!",
+  });
+});
 
 // middleware
 app.use((req, res, next) => {
@@ -19,13 +25,6 @@ app.use((req, res, next) => {
 });
 app.use("/site", express.static(path.join(__dirname, "public")));
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.render("index", {
-    title: "My Friends Are VERYY Clever",
-    caption: "Let's go skiing!",
-  });
-});
 
 // routes
 app.use("/friends", friendsRouter);
