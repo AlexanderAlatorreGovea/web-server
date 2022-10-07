@@ -5,6 +5,8 @@ function getMessages(req, res) {
     title: "Messages to my Friends!",
     friend: "Elon Musk",
   });
+
+  // sends a file from our directory so in this case we are sending the image from the public folder
   // res.sendFile(path.join(__dirname, '..', 'public', 'images', 'skimountain.jpg'));
 }
 
